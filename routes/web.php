@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::get('/main', function () {
+    return view('main')->with([
+        'name' => 'Pavel'
+    ]);
+});
+Route::get('/new', function () {
+    return view('new');
+});
+Route::get('/news', function () {
+    return view('news');
+});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
